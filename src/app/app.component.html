@@ -1,0 +1,18 @@
+<h1 class="text">{{this.title}}</h1>
+  <div class="sql-editor-container">
+    <div class="sql-editor-header">
+      <div class="sql-editor-title">SQL Editor</div>
+      <div class="sql-editor-buttons">
+        <button class="sql-editor-button">Run</button>
+        <button class="sql-editor-button">Save</button>
+      </div>
+    </div>
+    <div class="sql-editor-area">
+      <ngx-codemirror
+        #codemirror
+        [options]="codeMirrorOptions"
+        [(ngModel)]="query"
+        (ngModelChange)="setEditorContent($event)">
+      </ngx-codemirror>
+    </div>
+  </div>
